@@ -1,3 +1,64 @@
-body{
-    background-color: blue;
+*{
+    margin:0;
+    padding:0;
 }
+body{
+    background-color:grey; 
+    font-family: 'Roboto Slab', serif;
+    margin-top:0%;
+    margin-bottom:0%;
+    margin-left:3%;
+    margin-right:0;
+}
+h3{
+    color:brown;
+}
+.image{
+    width:100px;
+    height:100px;
+    border:3px solid white;
+    border-radius:50%;
+
+
+}
+.head{
+    float:left;
+
+}
+.section-top{
+   text-align:center;
+    border:200px;
+    border-style:none;
+    background-color: darkslateblue;
+}
+.section-first{
+    margin-bottom:5%;
+    width:100%;
+}
+.section-left{
+    margin-top:2%;
+    margin-bottom:1%;
+    margin-right:1%;
+    height:200px;
+    width:48%;
+    float:left;
+ }
+ .section-right{
+    margin-top:2%;
+    margin-bottom:1%;
+    margin-right:2%;
+    width:48%;
+    height:130px; 
+    float:left;
+    
+ }
+ .section-bottom{
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-right:2%;
+    width:48%;
+    height:100px;
+    float:left;
+     
+    
+ }
