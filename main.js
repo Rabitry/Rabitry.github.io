@@ -1,17 +1,22 @@
-let nav=document.querySelector(".navbar");
-window.onscroll=function(){
-    if(document.documentElement.scrollTop>20){
-        nav.classList.add("header-scrolled");
+function sendMail(){
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+      tel: document.getElementById("tel").value,
+       company: document.getElementById("company").value,
+  
     }
-    else{
-        nav.classList.remove("header-scrolled");
-
-    }
-}
-let navBar=document.querySelectorAll(".nav-link");
-let navCollapse=document.querySelector(".navbar-collapse.collapse");
-navBar.forEach(function(a){
-    a.addEventListener("click",function(){
-        navCollapse.classList.remove("show");
-    })
-})
+    const serviceId = "service_8jbz2zh";
+    const templateId = "template_4fbq02n";
+    
+    emailjs.send(serviceId, templateId, params).then((res)=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        document.getElementById("tel").value = "";
+        console.log(res);
+        alert("Your message sent succesfully");
+      })
+      .catch((err)=> console.log(err));
+  }
